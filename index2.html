@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manish</title>
+  <style>
+    body {
+
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      position: relative;
+      /* 🔁 Enable scrolling by removing overflow: hidden */
+
+    }
+
+    /* Blurred background image */
+    body::before {
+
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('https://www.digitalplatforms.co.za/wp-content/uploads/2015/11/Website-Design-Background.jpg'); /* 🔁 Change background image */
+      background-size: cover;
+      background-position: center;
+      filter: blur(10px);
+      z-index: -1;
+ 
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 10px;
+
+    }
+
+    /* Heading with hover effect */
+    h1 {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    h1:hover {
+      transform: scale(1.1);
+    }
+
+    /* Image + text row */
+    .image-row {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      transition: transform 0.3s ease;
+      /*mix-blend-mode: screen;*/
+	 /* 🔁 Try 'screen', 'overlay', 'soft-light', etc. */
+    }
+
+    .image-row:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      width: 400px;   /* 🔁 Resize width here */
+      height: 400px;   /* 🔁 Resize height here */
+      margin-right: 20px;
+      border: none;
+
+    }
+
+    .image-text {
+      font-size: 18px;
+      color: #000;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🎵 Background music -->
+ <audio autoplay loop> 
+    <source src="song.mp3" type="audio/mpeg"> <!-- 🔁 Change music file -->
+    Your browser does not support the audio element.
+  </audio>
+<button onclick="document.getElementById('bg-music').play()">Play Music</button>
+
+  <div class="container">
+    <h1>Manish</h1>
+
+    <!-- 🖼️ Image + Text block -->
+    <a href="https://www.google.com" target="_blank">
+      <div class="image-row">
+        <img src="C:\Users\simra\OneDrive\Desktop\my\DSC_8310.JPG" alt="Image1"> <!-- 🔁 Change image file -->
+        <div class="image-text">This is description for Image 1</div>
+      </div>
+    </a>
+
+     <a href="https://youtu.be/xPxCKEY4dVc?si=Y5Ad_152DIBj_CH8" target="_blank">
+      <div class="image-row">
+        <img src="C:\Users\simra\OneDrive\Desktop\my\DSC_9566.JPG" alt="Image1">
+        <div class="image-text">Night of the Reception</div>
+      </div>
+    </a>
+
+    <a href="https://youtu.be/aD4Q_X_5WZY?si=iF4EUyScnNbyQlvf" target="_blank">
+      <div class="image-row">
+        <img src="C:\Users\simra\OneDrive\Desktop\my\DSC_9137.JPG" alt="Image1">
+        <div class="image-text">Wedding Diary</div>
+      </div>
+    </a>
+
+    <a href="https://youtu.be/Xji8ygA3bJc?si=P_dOMVj9B9ZIOrJA" target="_blank">
+      <div class="image-row">
+        <img src="C:\Users\simra\OneDrive\Desktop\my\DSC_9101.JPG" alt="Image1">
+        <div class="image-text">Engagement Story</div>
+      </div>
+    </a>
+  </div>
+</body>
+</html>
